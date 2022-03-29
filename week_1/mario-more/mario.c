@@ -31,13 +31,10 @@ int main(void) {
     }
 
     // Agora a parte do "espelho" dos #
-    printf(" ");
+    printf("  ");
     for(int k = hashes-i;k<hashes;k++){
       printf("#");
     }
-    for (int j = hashes;j>1;j--){
-          printf(" ");
-      }
     printf("\n");
   }
 }
