@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            const button_free = document.getElementById("button-free");
+            function mudarCor(){
+                if (document.getElementById("text-area").value == "Switzerland"){
+                    document.getElementById("text-area").style.background = "Green";
+                    document.querySelector("#answer-free").innerHTML = "Correct";
+                }else{
+                    document.getElementById("text-area").style.background = "Red";
+                    document.querySelector("#answer-free").innerHTML  = "Incorrect";
+                }
+            }
+            function bt1(){
+                document.getElementById("button-1").style.background = "green";
+                document.getElementById("button-2").style.background = "transparent";
+                document.getElementById("button-3").style.background = "transparent";
+                document.getElementById("button-4").style.background = "transparent";
+                document.getElementById("button-5").style.background = "transparent";
+                document.getElementById("answer-multiple").innerHTML = "Correct";
+                document.getElementById("answer-multiple").style.color = "green";
+            }
+            function bt2(){
+                document.getElementById("button-1").style.background = "transparent";
+                document.getElementById("button-2").style.background = "red";
+                document.getElementById("button-3").style.background = "transparent";
+                document.getElementById("button-4").style.background = "transparent";
+                document.getElementById("button-5").style.background = "transparent";
+                document.getElementById("answer-multiple").innerHTML = "Incorrect";
+                document.getElementById("answer-multiple").style.color = "red";
+            }
+            function bt3(){
+                document.getElementById("button-1").style.background = "transparent";
+                document.getElementById("button-2").style.background = "transparent";
+                document.getElementById("button-3").style.background = "red";
+                document.getElementById("button-4").style.background = "transparent";
+                document.getElementById("button-5").style.background = "transparent";
+                document.getElementById("answer-multiple").innerHTML = "Incorrect";
+                document.getElementById("answer-multiple").style.color = "red";
+            }
+            function bt4(){
+                document.getElementById("button-1").style.background = "transparent";
+                document.getElementById("button-2").style.background = "transparent";
+                document.getElementById("button-3").style.background = "transparent";
+                document.getElementById("button-4").style.background = "red";
+                document.getElementById("button-5").style.background = "transparent";
+                document.getElementById("answer-multiple").innerHTML = "Incorrect";
+                document.getElementById("answer-multiple").style.color = "red";
+            }
+            function bt5(){
+                document.getElementById("button-1").style.background = "transparent";
+                document.getElementById("button-2").style.background = "transparent";
+                document.getElementById("button-3").style.background = "transparent";
+                document.getElementById("button-4").style.background = "transparent";
+                document.getElementById("button-5").style.background = "red";
+                document.getElementById("answer-multiple").innerHTML = "Incorrect";
+                document.getElementById("answer-multiple").style.color = "red";
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>Whats is the approximate ratio of people sheep in New Zealand</h3>
+                <div class="container-multiple-choice">
+                    <button onClick="bt1()" id="button-1">6 people per 1 sheep</button>
+                    <button onClick="bt2()" id="button-2">3 people per 1 sheep</button>
+                    <button onClick="bt3()" id="button-3">1 people per 1 sheep</button>
+                    <button onClick="bt4()" id="button-4">1 people per 3 sheep</button>
+                    <button onClick="bt5()" id="button-5">1 people per 6 sheep</button>
+                    <p id="answer-multiple"></p>
+                </div>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>In which country is it illegal to own only one guinea pig, as a lone guinea pig might be lonely?</h3>
+                <input type="text" id="text-area" class="text-area">
+                <button class="button-free" id="button-free" onClick="mudarCor()">Check Answer</button>
+                <p id="answer-free"></p>
+            </div>
+        </div>
+        <footer class="footer-page">
+            <p class="text-footer">FEITO POR VINICIUS GABRIEL | 2022</p>
+        </footer>
+    </body>
+</html>

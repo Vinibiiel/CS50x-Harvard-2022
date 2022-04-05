@@ -1,0 +1,117 @@
+body {
+    background-color: lightblue;
+}
+/* HEADER */
+.nav-header{
+    display:inline;
+    width:30%;
+    align-items: center;
+    padding-right: 20px;
+}
+.nav-header ul{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding:0;
+    margin:0;
+}
+.li-headers{
+    list-style:none;
+    display:inline;
+}
+.li-headers a{
+    text-decoration: none;
+    color: white;
+    background-color: #4634eb;
+    border: 2px solid #4634eb;
+    border-radius: 20px;
+    padding: 5px;
+    transition: 0.3s;
+}
+.li-headers a:hover{
+    background-color: white;
+    color:#4634eb;
+}
+.header-page{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+}
+.logo-letz:hover{
+    opacity: 0.7;
+}
+.logo-letz{
+    width: 120px;
+    height: 70px;
+    box-sizing: content-box;
+    padding: 10px;
+    display: inline;
+    transition: 0.3s;
+}
+/* SECTION */
+.card-section{
+    display: flex;
+    justify-content: space-around;
+}
+.card{
+    width: 30%;
+    padding:20px;
+    margin: 30px 0;
+    border-radius:30px;
+    transition: opacity 0.3s;
+}
+.card:hover{
+    opacity:0.6;
+}
+.card a{
+    text-decoration: none;
+    color: #0ebbf0;
+}
+.card h4{
+    font-size:22px;
+    padding: 10px 0;
+}
+
+.news-section{
+    background-color:white;
+    padding:50px 0;
+}
+.news-section-cards{
+    display: flex;
+    justify-content: space-around;
+}
+.title-news{
+    text-align: center;
+    color:#2f0382;
+}
+.card-news{
+    width: 30%;
+    padding:20px;
+    margin: 30px 0;
+    border-radius:30px;
+    text-align: center;
+    background-color:#eaeaea;
+}
+.card-news a{
+    text-decoration: none;
+    color: #0ebbf0;
+}
+.card-news p{
+    font-size:18px;
+    padding: 10px 0;
+}
+/* FOOTER */
+.footer-page{
+    background-color: #4634eb;
+    height:150px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.text-footer{
+    font-size: 20px;
+    letter-spacing: 2px;
+    color:black;
+}

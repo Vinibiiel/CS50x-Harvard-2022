@@ -1,0 +1,85 @@
+body {
+    background-color: white;
+}
+/* HEADER */
+.nav-header{
+    display:inline;
+    width:30%;
+    align-items: center;
+    padding-right: 20px;
+}
+.nav-header ul{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding:0;
+    margin:0;
+}
+.li-headers{
+    list-style:none;
+    display:inline;
+}
+.li-headers a{
+    text-decoration: none;
+    color: white;
+    background-color: #4634eb;
+    border: 2px solid #4634eb;
+    border-radius: 20px;
+    padding: 5px;
+    transition: 0.3s;
+}
+.li-headers a:hover{
+    background-color: white;
+    color:#4634eb;
+}
+.header-page{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    border-bottom: 3px solid black;
+    margin-bottom: 20px;
+}
+.logo-letz:hover{
+    opacity: 0.7;
+}
+.logo-letz{
+    width: 120px;
+    height: 70px;
+    box-sizing: content-box;
+    padding: 10px;
+    display: inline;
+    transition: 0.3s;
+}
+
+/* SECTION */
+.container-section{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.advantages-section ul li{
+    list-style: none;
+    font-family: tahoma;
+    color: #4634eb;
+    padding: 5px 0;
+    font-size: 22px;
+    padding:10px;
+}
+
+
+
+/* FOOTER */
+.footer-page{
+    background-color: #4634eb;
+    height:150px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.text-footer{
+    font-size: 20px;
+    letter-spacing: 2px;
+    color:black;
+}
