@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <h3 style="text-align:center;margin-bottom:20px;">History</h3>
+    <table style="background-color: transparent;margin-bottom: 1rem;width: 100%;">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody style="background-color: rgb(179, 208, 255, 0.3)">
+            {%- if query %}
+                {%- for item in query %}
+                <tr>
+                    <td style="padding: 0.75rem;vertical-align: middle;">{{ item.acronym }}</td>
+                    <td style="padding: 0.75rem;vertical-align: middle;">{{ item.company}}</td>
+                    <td style="padding: 0.75rem;vertical-align: middle;">{{ item.type }}</td>
+                    <td style="padding: 0.75rem;vertical-align: middle;">{{  item.quantity }}</td>
+                    <td style="padding: 0.75rem;vertical-align: middle;">$ {{ item.price }}</td>
+                    <td style="padding: 0.75rem;vertical-align: middle;">$ {{ "%.2f" % (item.quantity*item.price) }}</td>
+                </tr>
+                {%- endfor %}
+            {%- else %}
+                <h4 style="color:red">You don't have any History</h4>
+            {%- endif %}
+        </tbody>
+    </table>
+{% endblock %}

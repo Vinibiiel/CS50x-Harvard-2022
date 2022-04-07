@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+    <h3 style="text-align:center;margin-bottom:20px;">Buy Quotes</h3>
+    <form action="/buy" method="post">
+        <div class="mb-3">
+            <label style="margin-bottom:10px;">Write the Acronym</label>
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="acronym" name="symbol" placeholder="Symbol" type="text">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="acronym" name="shares" placeholder="Shares" type="text">
+            <button class="btn btn-primary" name="acr" id="acr" style="margin:20px 0;" type="submit">Search</button>
+        </div>
+    </form>
+{% endblock %}

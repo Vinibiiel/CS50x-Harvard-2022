@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <h3 style="text-align:center;margin-bottom:20px;">Sell Quotes</h3>
+    <form action="/sell" method="post">
+        <div class="mb-3">
+            <label style="margin-bottom:10px;">Write the Acronym</label>
+            <br>
+            <select name="symbol">
+                {%- for item in items %}
+                    <option value="{{item.symbol}}">{{item.symbol}}</option>
+                {%- endfor %}
+              </select>
+              <br>
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="shares" placeholder="Shares" type="text">
+            <button class="btn btn-primary" name="acr" id="acr" style="margin:20px 0;" type="submit">Sell</button>
+        </div>
+    </form>
+{% endblock %}
